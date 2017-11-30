@@ -1,5 +1,6 @@
 package com.example.ovidiu.easyworkers;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -41,10 +42,14 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        Intent intent = new Intent(this, FirstScreen.class);
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_aboutus) {
-
+                return true;
+        }
+        if (id == R.id.action_home){
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
